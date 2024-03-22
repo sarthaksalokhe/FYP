@@ -1,0 +1,24 @@
+{% extends "base2.html" %}
+{% block title %} My Account {% endblock title %} 
+
+{% block body %}
+<style>
+    .user-info {
+        padding: 20px;
+        border-radius: 5px;
+        margin: 20px 0;
+        margin-left: 60px;
+    }
+    
+</style>
+
+<h2 style = "margin-top: 80px; margin-left: 80px; font-weight: 700"> {{user.first_name}}'s Account Information </h2>
+    <div class="user-info">
+        <h5 style = "font-weight: 400"><strong>Full Name:</strong> {{ user.first_name }} {{ user.last_name }}</h5>
+        <h5 style = "font-weight: 400"><strong>Username:</strong> {{ user.username }}</h5>
+        <h5 style = "font-weight: 400"><strong>Email:</strong> {{ user.email }}</h5>
+
+<h2 style = "margin-top: 50px; font-weight: 700"> Transaction History </h2>
+
+{% endblock body %}
+
